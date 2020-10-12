@@ -2,7 +2,7 @@
 
 function getIt(){
   $("p").on("click", function() {
-  return alert("Hey!")
+  alert("Hey!")
 });
 }
 
@@ -14,10 +14,15 @@ function frameIt(){
 }
 
 function pressIt(){
-  $()
+  $("form").on("keydown", function(){
+    if(key.which == 103){
+      alert("G was pressed!");
+    }
+  })
 }
 
 $(document).ready(function(){
  getIt();
  frameIt();
+ pressIt()
 });
